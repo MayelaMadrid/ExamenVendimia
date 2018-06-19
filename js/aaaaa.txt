@@ -1,0 +1,39 @@
+$.ajax({
+		url: 'modelo/consulta_venta.php',
+		type: 'GET',
+		dataType: 'JSON',
+		success:function(data){
+			$(data).each(function(i,v){
+				$('#catalogo_ventas').append('<tr>'
+					  +'<td>'+v.folio+'</td>'
+					  +'<td>'+v.id_cliente+'</td>'
+					   +'<td>'+v.nombre_completo+'</td>'
+					    +'<td>'+v.total+'</td>'
+						 +'<td>'+v.fecha+'</td>'
+					 +'</tr>');
+			});
+		},
+		error: function(xhr, desc, err){ 
+			console.log(xhr);
+			console.log("Detalles: " + desc + "\nError: " + err);
+		}
+	});
+	
+	/////////////////////////////////////////
+	
+		
+	$.ajax({
+		url: 'modelo/maximo_venta.php',
+		type: 'GET',
+		dataType: 'JSON',
+		success:function(data){
+			$(data).each(function(i,v){
+			$('#folio_venta').html("Folio Venta:" + v.folio );
+			});
+		},
+		error: function(xhr, desc, err){ 
+			console.log(xhr);
+			console.log("Detalles: " + desc + "\nError: " + err);
+		}
+	});
+	

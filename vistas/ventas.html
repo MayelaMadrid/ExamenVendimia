@@ -1,0 +1,205 @@
+
+		<div class="col-md-12 col-12">
+		<div id="alert_Exito">
+				<div  class="alert alert-success mt-5" role="alert" >
+					<strong>Bien Hecho</strong> La venta ha sido registrada correctamente” 
+				</div>
+			</div>
+			<div id="alert_falla">
+				<div  class="alert alert-danger mt-5" role="alert" >
+					<strong id="m2">¡Cuidado!</strong> <p id="fallaalgo"> </p>
+				</div>
+			</div>
+			<div id="Ventas">
+				<div class="row">
+					<div class="col-md-4 col-4 ">
+					</div>
+					<div class="col-md-8 col-8  ">
+						<button type="button" class="btn btn-primary float-right  mt-4 mr-5" id="btn_nuevaV">Nueva Venta</button>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-1 ">
+					</div>
+					<div class="col-md-11 col-11  "></">
+						<div class="container">
+							<h2 class="text-primary">Ventas Activas</h2>
+								<table class="table" id="catalogo_ventas">
+									<thead class="text-info">
+										<tr>
+											<th>Folio Venta</th>
+											<th>Clave Cliente</th>
+											<th>Nombre</th>
+											<th>Total</th>
+											<th>Fecha</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											
+										</tr>
+									</tbody>
+								</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="nuevaVenta">
+				<div class="row">
+					<div class="col-md-1 col-1">
+					</div>
+					<div class="col-md-8 col-8  ">
+						<div class="col-md-8 col-8  mr-0 ml-0">
+							<h2 class="text-primary mt-5"> Registro de Ventas</h2>
+							<hr>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-12 mr-0 ml-0">
+							<h4 class="mt-4 mb-4 text-primary float-right mt-5 ml-5 " id="folio_venta" >folio:</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-1  mr-0 ml-0">
+					</div>
+					<div class="col-md-11 col-11  mr-0 ml-0">
+						<div class="row">
+							<div class="col-md-2 col-2">
+								<label class="form-control bg-primary  text-white rounded   mt-4 mb-4"> Cliente<label>
+							</div>	
+							<div class="col-md-2 col-2">
+								<input type="text "class=" form-control txt-primary  mt-4 mb-4" id="cliente" placeholder="Cliente"> 
+							</div>	
+							<div class="col-md-3 col-3">
+								<h4 class=" mt-4 text-info" id="rfc_cliente"></h4>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-1 mr-0 ml-0">
+					</div>
+					<div class="col-md-11 col-11 mr-0 ml-0">
+						<div class="row">
+							<div class="col-md-2 col-2">
+								<label class="form-control bg-primary rounded text-white mt-4 mb-4"> Articulo<label>
+							</div>	
+							<div class="col-md-2 col-2">
+								<input type="text" class="form-control   mt-4 mb-4" placeholder="Articulo" id="articulo"> 
+							</div>	
+								<div class="col-md-1 col-1 ">
+								<button type="submit"class="btn btn-primary mt-4" id="btn_agregar"> Agregar</button> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-1  mr-0 ml-0">
+					</div>
+					<div class="col-md-11 col-11  mr-0 ml-0">
+						<div class="row">
+						
+							<div class="container">           
+							  <table class="table" id="articulos_compra">
+								<thead>
+								  <tr>
+									<th>Descripcion Articulo</th>
+									<th>Modelo</th>
+									<th>Cantidad</th>
+									<th>Precio</th>
+									<th>Importe</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									
+								  </tr>
+								</tbody>
+							  </table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-7 col-7  mr-0 ml-0">
+					</div>
+					<div class="col-md-5 col-5  mr-0 ml-0">
+						<div class="row">
+							<div class="col-md-5 col-5">
+								<label class="rounded bg-secondary  form-control text-white   mt-4 mb-4"> Enganche<label>
+							</div>	
+							<div class="col-md-4 col-4">
+								<input type="text "  id ="in_enganche"class=" form-control  float-right mt-4" placeholder="Articulo"> 
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-md-5 col-5">
+								<label class="form-control bg-secondary  rounded  text-white mt-4 mb-4"> Bonificacion Enganche<label>
+							</div>	
+							<div class="col-md-4 col-4">
+								<input type="text" id="in_bonificacion" class=" form-control  float-right  mt-4 " placeholder="Articulo"> 
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-md-5 col-5">
+								<label class="form-control bg-secondary text-white rounded   mt-4 mb-4"> Total<label>
+							</div>	
+							<div class="col-md-4 col-4 ">
+								<input type="text" id="in_total" class=" form-control  float-right mt-4 " placeholder="Articulos"> 
+							</div>	
+						</div>
+						<hr>
+						<div id="botones_venta">
+						<div class="float-right">
+							<button type="submit" id="btn_siguiente" class="btn btn-success mr-3">Siguiente</button>
+						 </div>
+						 <div class="float-right">
+							<button type="submit" id="btn_cancelar" class=" mr-3 btn btn-danger">Cancelar</button>
+						 </div>
+						 </div>
+					</div>
+						</div>
+					<div id="mensualidades_Buttons">
+				
+					<div class="col-md-11 col-11 ml-5 mt-5"></">
+						<div class="container" >
+							<h2 class=" text-center text-white bg-primary ">ABONOS MENSUALES</h2>
+								<table id="radiobutton-mes" class="table table-primary table-striped">
+									<tbody>
+										<tr>
+											
+										</tr>
+									</tbody>
+								</table>
+						</div>
+					</div>
+					<div id="botones_abonos">
+						<div class="float-right">
+							<button type="submit" id="btn_guardar" class="btn btn-success mr-3">Guardar</button>
+						 </div>
+						 <div class="float-right">
+							<button id="btn_cancelar" type="submit" class="mr-3 btn btn-danger">Cancelar</button>
+						 </div>
+						 </div>
+				
+			</div>
+			
+				
+				
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>
+		
+<script src="js/ventas.js"></script>

@@ -1,0 +1,85 @@
+
+		<div class="col-md-12 col-12 ">
+			<div id="Clientes">
+				<div class="row">
+					<div class="col-md-4 col-4 ">
+					</div>
+					<div class="col-md-8 col-8  ">
+						<button type="button" id="botonNC" class="btn btn-primary float-right mt-4 mr-5">Nuevo Cliente</button>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1 col-1 ">
+					</div>
+					<div class="col-md-11 col-11  "></">
+						<div class="container">
+							<h2 class="text-primary">Clientes Registrados</h2>
+								<table id="catalogo_clientes" class="table">
+									<thead class="text-info">
+										<tr>
+											<th>Clave Cliente</th>
+											<th>Nombre</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											
+										</tr>
+									</tbody>
+								</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="NuevoCliente" >
+				<div class="row">
+					<div class="col-md-1 col-1 ">
+					</div>
+					<div class="col-md-11 col-11  ">
+					<div class="row">
+						<h2 class="mt-4 mb-4 text-primary ml-4" >Registro cliente</h2>
+						<h4 class="mt-4 mb-4 text-primary float-right mt-5 ml-5 " id="folio_cliente" >folio:</h4>
+					</div>
+						<div class="container">
+						<form action="javascript:void(0);" method="POST">
+						  <div class="form-group">
+							<label for="name">Nombre:</label>
+							<input type="text" class="form-control" id="Name" name="nombre" required>
+						  </div>
+						  <div class="form-group">
+							<label for="lastname">Apellido Paterno:</label>
+							<input type="text" class="form-control" id="apepat" name="apellido_paterno" required>
+						  </div>
+						  <div class="form-group">
+							<label for="lastname">Apellido Materno:</label>
+							<input type="text" class="form-control" id="apemat" name="apellido_materno" required>
+						  </div>
+						  <div class="form-group">
+							<label for="RFC">RFC:</label>
+							<input type="text" class="form-control" id="RFC" name="rfc" required>
+						  </div>
+						  <div class="float-right">
+							<button type="submit" id="btn_guardar" class="btn btn-primary">Guardar</button>
+						  </div>
+						</form > 
+						<div class="float-right">					
+							<button type="submit" id="btn_cancelar" class="mr-3 btn btn-danger">Cancelar</button>
+						</div>						
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div id="alert_Exito">
+				<div  class="alert alert-success mt-5" role="alert" >
+					<strong>Bien Hecho</strong> El cliente ha sido registrado correctamente
+				</div>
+			</div>
+			<div id="alert_falla">
+				<div  class="alert alert-danger mt-5" role="alert" >
+					<strong id="m2">Rellene todos los campos</strong> <p id="fallaalgo"> </p>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/clientes.js"></script>
+	
