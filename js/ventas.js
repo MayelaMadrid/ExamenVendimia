@@ -95,7 +95,7 @@ $.ajax({
 	$('#cliente').typeahead({
 		hint: true,
 		highlight: true,
-		minLength: 1
+		minLength: 3
 	},
 	{
 		name: 'ac_cliente',
@@ -121,7 +121,7 @@ $.ajax({
 	$('#articulo').typeahead({
 		hint: true,
 		highlight: true,
-		minLength: 1
+		minLength: 3
 	},
 	{
 		name: 'ac_articulo',
