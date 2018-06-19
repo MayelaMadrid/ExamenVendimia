@@ -2,10 +2,7 @@
 	require ('conexion.php');
 	$respuesta = array();
 	
-	
-	
-	
-	$query = "SELECT  max(id_articulo)
+	$query = "SELECT max(id_articulo)
 				FROM 
 				articulos 
 			";
@@ -20,7 +17,7 @@
 		while($stmt->fetch()){
 			
 			$respuesta[] = array(
-				"id_articulo" => $id_articulo
+				"id_articulo" => $id_articulo + 1
 			);
 			
 		}

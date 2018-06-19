@@ -34,6 +34,21 @@ $(document).ready(function(){
 	
 	/////////////////////////////////////////////////
 	
+	$.ajax({
+		url: 'modelo/maximo_articulo.php',
+		type: 'GET',
+		dataType: 'JSON',
+		success:function(data){
+			$(data).each(function(i,v){
+			$('#folio_articulo').html("Clave: " + v.id_articulo);
+			});
+		},
+		error: function(xhr, desc, err){ 
+			console.log(xhr);
+			console.log("Detalles: " + desc + "\nError: " + err);
+		}
+	});
+	
 	
 	$('#catalogo_articulos').on('click','#btn_editar',function(){
 		$('#h2').html("Actualizacion de Articulos");
