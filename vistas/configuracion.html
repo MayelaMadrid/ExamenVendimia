@@ -9,15 +9,15 @@
 							<form action="javascript:void(0);" method="POST">
 								  <div class="form-group">
 									<label for="tasa">Tasa financiamiento:</label>
-									<input type="number" class="form-control" id="tasa" >
+									<input type="number" class="form-control" min="0" id="tasa" >
 								  </div>
 								  <div class="form-group">
 									<label for="enganche">% enganche:</label>
-									<input type="number" class="form-control" id="enganche" >
+									<input type="number" class="form-control" min="0" id="enganche" >
 								  </div>
 								  <div class="form-group">
 									<label for="plazo">Plazo Maximo:</label>
-									<input type="number" class="form-control" id="plazo">
+									<input type="number" class="form-control" min="0" id="plazo">
 								  </div>
 								  <div class="float-right">
 									<button type="submit" class="btn btn-primary" id="btn_guardar">Guardar</button>

@@ -172,7 +172,7 @@ $.ajax({
 							'<tr id="'+id_articulo+'tr">'
 							  +'<td>'+descripcion+'</td>'
 							  +'<td>'+modelo+'</td>'
-							  +'<td><input type="number" class="form-control text-center" min="1" id="cantidad" min=1 value="'+0+'" data-precio="'+precio+'" data-id="'+id_articulo+'" data-exi="'+existencia+'"></td>'
+							  +'<td><input type="number" class="form-control text-center" min="1" id="cantidad" value="'+0+'" data-precio="'+precio+'" data-id="'+id_articulo+'" data-exi="'+existencia+'"></td>'
 							  +'<td id="pi'+id_articulo+'" >$'+0+'</td>'
 							  +'<td id="im'+id_articulo+'" >$'+0+'</td>'
 							  +'<td class="text-right"><button class="btn btn-small btn-danger" id="btn_eliminar_articulo" data-id="'+id_articulo+'"><i class="fas fa-times"></i>  </button></td>'
