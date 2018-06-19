@@ -5,10 +5,12 @@ $(document).ready(function(){
 	$('#NuevoCliente').hide();
 	$('#alert_Exito').hide();
 	$('#alert_falla').hide();
+	$('#folio_cliente').hide();
 	
 	$('#botonNC').click(function(){
 		$('#Clientes').hide();
 		$('#NuevoCliente').fadeIn('fast');
+		$('#folio_cliente').fadeIn('fast');
 	});
 	
 	$.ajax({
@@ -20,7 +22,7 @@ $(document).ready(function(){
 				$('#catalogo_clientes').append('<tr>'
 					  +'<td>'+v.id_cliente+'</td>'
 					  +'<td>'+v.nombre_completo+'</td>'
-					  +'<td class="text-right"><button class="btn btn-small btn-info" id="btn_editar" data-id="'+v.id_cliente+'"></button></td>'
+					  +'<td class="text-right"><button class="btn btn-small btn-info" id="btn_editar" data-id="'+v.id_cliente+'"><i class="fa fa-pencil-alt"></i></button></td>'
 					 +'</tr>');
 			});
 		},
@@ -50,6 +52,8 @@ $(document).ready(function(){
 	
 	
 	$('#catalogo_clientes').on('click','#btn_editar',function(){
+		$('#RC').html("Actualizacion de cliente");
+		$('#NuevoCliente').fadeIn('fast');
 		$('#Clientes').hide();
 		$('#NuevoCliente').fadeIn('fast');
 		var id_cliente = $(this).data('id');

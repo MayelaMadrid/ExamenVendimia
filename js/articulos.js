@@ -4,12 +4,14 @@ $(document).ready(function(){
 	$('#NuevoArticulo').hide();
 	$('#alert_Exito').hide();
 	$('#alert_falla').hide();
+	$('#folio_articulo').hide();
 	
 	
 	$('#btnArticulo').click(function(){
 		$('#Articulos').hide();
 		$('#NuevoArticulo').fadeIn('fast');
 		$('#h2').html("Registro de Articulos");
+		$('#folio_articulo').fadeIn('fast');
 	});
 	
 	
@@ -22,7 +24,7 @@ $(document).ready(function(){
 				$('#catalogo_articulos').append('<tr>'
 					  +'<td>'+v.id_articulo+'</td>'
 					  +'<td>'+v.descripcion+'</td>'
-					  +'<td class="text-right"><button class="btn btn-small btn-info" id="btn_editar" data-id="'+v.id_articulo+'"></button></td>'
+					  +'<td class="text-right"><button class="btn btn-small btn-info" id="btn_editar" data-id="'+v.id_articulo+'"><i class="fa fa-pencil-alt"></i></button></td>'
 					 +'</tr>');
 			});
 		},

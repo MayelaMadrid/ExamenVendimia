@@ -47,7 +47,7 @@ $(document).ready(function(){
 		dataType: 'JSON',
 		success:function(data){
 			$(data).each(function(i,v){
-				$('#folio_venta').html("Folio Venta:" + v.folio );
+				$('#folio_venta').html("Folio Venta: " + v.folio );
 			});
 		},
 		error: function(xhr, desc, err){ 
@@ -55,16 +55,6 @@ $(document).ready(function(){
 			console.log("Detalles: " + desc + "\nError: " + err);
 		}
 	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -174,7 +164,7 @@ $.ajax({
            }else{
 		 
 				
-		if($('#articulo').val() && id_articulo != 0 && existencia >= 1){
+		if($('#articulo').val() && id_articulo != 0 && existencia >= 1 ){
 				
 		
 
@@ -182,10 +172,10 @@ $.ajax({
 							'<tr id="'+id_articulo+'tr">'
 							  +'<td>'+descripcion+'</td>'
 							  +'<td>'+modelo+'</td>'
-							  +'<td><input type="number" class="form-control text-center" min="1" id="cantidad" min=1 value="'+0+'" data-precio="'+precio+'" data-id="'+id_articulo+'"></td>'
+							  +'<td><input type="number" class="form-control text-center" min="1" id="cantidad" min=1 value="'+0+'" data-precio="'+precio+'" data-id="'+id_articulo+'" data-exi="'+existencia+'"></td>'
 							  +'<td id="pi'+id_articulo+'" >$'+0+'</td>'
 							  +'<td id="im'+id_articulo+'" >$'+0+'</td>'
-							  +'<td class="text-right"><button class="btn btn-small btn-danger" id="btn_eliminar_articulo" data-id="'+id_articulo+'"></button></td>'
+							  +'<td class="text-right"><button class="btn btn-small btn-danger" id="btn_eliminar_articulo" data-id="'+id_articulo+'"><i class="fas fa-times"></i>  </button></td>'
 							+'</tr>');
 						
 						
@@ -199,7 +189,9 @@ $.ajax({
 			if(!$('#articulo').val() || id_articulo == 0){
 				mensaje.innerHTML="Escoja un articulo valido";
 					$('#alert_falla').fadeIn('fast');
+					esconder();
 			}	
+			
 		   }
 		   }
 	});
@@ -212,13 +204,19 @@ $.ajax({
 	var total_adeudo;
 	
 	$('#articulos_compra').on('change','#cantidad',function (){
-		var cantidad2 = 0;
+		var cantidad2 = 0, exis;
 		var id_articulo2, precio2;
 		id_articulo2 =  $(this).data('id');
 		cantidad2 = $(this).val();
 		precio2 =  $(this).data('precio');
+		exis =  $(this).data('exi');
 		var imp = $('#im'+id_articulo2).text();
-					 //id_articulo = $(this).data('id');
+			if(exis<cantidad2){
+				mensaje.innerHTML="La cantidad excede la existencia, Favor de verificar";
+					$('#alert_falla').fadeIn('fast');
+					esconder();
+			}	
+					 
 			
 		calcula(imp, cantidad2,precio2,id_articulo2);
 		
