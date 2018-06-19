@@ -1,6 +1,6 @@
 <?PHP
 
-	$mysqli = new mysqli('localhost', 'root', '', 'lavendimia');
+	$mysqli = new mysqli('localhost', 'root', '12345678', 'lavendimia');
 
 	mysqli_set_charset($mysqli, "utf8");
 
